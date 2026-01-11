@@ -1,40 +1,62 @@
+import "./App.css";
+
 function App() {
   return (
-    <div style={{
-      minHeight: "100vh",
-      backgroundColor: "#0a0a0a",
-      color: "white",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      fontFamily: "Arial, sans-serif",
-      textAlign: "center",
-      padding: "20px"
-    }}>
-      <h1 style={{ fontSize: "3rem", marginBottom: "10px" }}>
-        🎬 NextGen Filmmakers
-      </h1>
+    <>
+      {/* HEADER */}
+      <header className="header">
+        <h1 className="logo">NextGen Filmmakers</h1>
+        <nav className="nav">
+          <a href="#about">À propos</a>
+          <a href="#projects">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <p style={{ maxWidth: "600px", fontSize: "1.1rem", opacity: 0.85 }}>
-        Une nouvelle génération de créateurs.
-        Des histoires puissantes.
-        Des films qui marquent leur époque.
-      </p>
+      {/* HERO */}
+      <section className="hero">
+        <h2>
+          La nouvelle génération <br /> du cinéma africain
+        </h2>
+        <p>
+          Former. Créer. Inspirer.  
+          Le futur s’écrit maintenant.
+        </p>
+        <button>Découvrir</button>
+      </section>
 
-      <button style={{
-        marginTop: "30px",
-        padding: "12px 24px",
-        fontSize: "1rem",
-        border: "none",
-        borderRadius: "6px",
-        cursor: "pointer",
-        backgroundColor: "#e50914",
-        color: "white"
-      }}>
-        Rejoindre le mouvement
-      </button>
-    </div>
+      {/* ABOUT */}
+      <section id="about" className="section">
+        <h3>À propos</h3>
+        <p>
+          NextGen Filmmakers est une communauté créative dédiée aux jeunes
+          passionnés de cinéma, de vidéo et de storytelling visuel.
+        </p>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="section dark">
+        <h3>Nos projets</h3>
+        <p>
+          Courts-métrages, documentaires, formations, collaborations
+          artistiques. Ici, les idées prennent vie.
+        </p>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="section">
+        <h3>Contact</h3>
+        <p>
+          Une idée ? Un projet ?  
+          Écris-nous et faisons du bruit ensemble.
+        </p>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <p>© 2026 NextGen Filmmakers — Tous droits réservés</p>
+      </footer>
+    </>
   );
 }
 
