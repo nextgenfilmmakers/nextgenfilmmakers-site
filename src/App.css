@@ -1,0 +1,24 @@
+.app {
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #e10600;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
