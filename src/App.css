@@ -1,17 +1,17 @@
-/* =========================
-   VARIABLES GLOBALES
-========================= */
+/* =====================
+   VARIABLES
+===================== */
 :root {
   --black: #0b0b0f;
   --black-soft: #12121a;
   --white: #ffffff;
-  --white-soft: #dcdcdc;
+  --white-soft: #d9d9d9;
   --red: #c4161c;
 }
 
-/* =========================
-   RESET GLOBAL
-========================= */
+/* =====================
+   RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -19,15 +19,14 @@
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--black);
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--black);
   color: var(--white);
-  line-height: 1.6;
 }
 
-/* =========================
+/* =====================
    HEADER
-========================= */
+===================== */
 .header {
   position: fixed;
   top: 0;
@@ -51,26 +50,22 @@ body {
   font-size: 22px;
   font-weight: 900;
   letter-spacing: 3px;
-  color: var(--white);
 }
 
 .slogan {
   margin-top: 6px;
   font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.6px;
   font-style: italic;
   color: var(--red);
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* =====================
+   NAV
+===================== */
 .nav a {
   margin-left: 35px;
   text-decoration: none;
   color: var(--white-soft);
-  font-weight: 500;
   font-size: 15px;
   transition: color 0.3s ease;
 }
@@ -79,28 +74,28 @@ body {
   color: var(--white);
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* =====================
+   HERO
+===================== */
 .hero {
   height: 100vh;
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(
       rgba(11, 11, 15, 0.85),
       rgba(11, 11, 15, 0.95)
     ),
     url("https://images.unsplash.com/photo-1485846234645-a62644f84728")
       center / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 90px;
 }
 
 .hero h2 {
   font-size: 68px;
   font-weight: 900;
-  max-width: 900px;
   line-height: 1.1;
+  max-width: 900px;
 }
 
 .hero p {
@@ -119,15 +114,15 @@ body {
 
 .hero button {
   margin-top: 45px;
-  width: fit-content;
   padding: 15px 40px;
   border-radius: 40px;
   border: none;
   background: var(--red);
   color: var(--white);
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  width: fit-content;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -136,17 +131,17 @@ body {
   box-shadow: 0 12px 35px rgba(196, 22, 28, 0.35);
 }
 
-/* =========================
-   SECTIONS GÉNÉRALES
-========================= */
+/* =====================
+   SECTIONS
+===================== */
 .section {
   padding: 120px 90px;
 }
 
 .section h3 {
   font-size: 38px;
-  margin-bottom: 22px;
   font-weight: 800;
+  margin-bottom: 22px;
 }
 
 .section p {
@@ -155,50 +150,24 @@ body {
   color: var(--white-soft);
 }
 
-/* =========================
-   SECTION SOMBRE
-========================= */
 .section.dark {
-  background-color: var(--black-soft);
+  background: var(--black-soft);
 }
 
-/* =========================
-   CARDS / BLOCS (SI UTILISÉS)
-========================= */
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* =========================
+/* =====================
    FOOTER
-========================= */
+===================== */
 .footer {
   padding: 50px 20px;
   text-align: center;
-  background-color: var(--black);
-  color: #777;
   font-size: 14px;
+  color: #777;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* =========================
+/* =====================
    RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .hero h2 {
-    font-size: 52px;
-  }
-}
-
+===================== */
 @media (max-width: 768px) {
   .header {
     padding: 20px 30px;
