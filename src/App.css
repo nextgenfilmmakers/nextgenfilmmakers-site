@@ -31,6 +31,25 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
 }
+.logo-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.slogan {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #f5c16c;
+  font-style: italic;
+}
 
 .nav a {
   margin-left: 30px;
