@@ -5,7 +5,10 @@ function App() {
     <>
       {/* HEADER */}
       <header className="header">
-        <h1 className="logo">NextGen Filmmakers</h1>
+        <div className="logo-block">
+          <div className="logo">NEXTGEN FILMMAKERS</div>
+          <div className="slogan">Façonner l'avenir du cinéma, une vision à la fois</div>
+          </div>
         <nav className="nav">
           <a href="#about">À propos</a>
           <a href="#projects">Projets</a>
