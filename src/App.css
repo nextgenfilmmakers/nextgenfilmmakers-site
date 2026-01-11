@@ -1,4 +1,17 @@
-/* RESET */
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+  --black: #0b0b0f;
+  --black-soft: #12121a;
+  --white: #ffffff;
+  --white-soft: #dcdcdc;
+  --red: #c4161c;
+}
+
+/* =========================
+   RESET GLOBAL
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,32 +19,27 @@
 }
 
 body {
-  background: var(--black);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--black);
   color: var(--white);
+  line-height: 1.6;
 }
 
-.slogan {
-  color: var(--red);
-}
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 60px;
+  padding: 22px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(11, 11, 15, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(11, 11, 15, 0.9);
+  backdrop-filter: blur(12px);
   z-index: 1000;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo-block {
@@ -41,119 +49,163 @@ body {
 
 .logo {
   font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--white);
 }
 
 .slogan {
-  margin-top: 4px;
-  font-size: 12px;
+  margin-top: 6px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.5px;
-  color: #f5c16c;
+  letter-spacing: 0.6px;
   font-style: italic;
+  color: var(--red);
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 .nav a {
-  margin-left: 30px;
+  margin-left: 35px;
   text-decoration: none;
-  color: #ccc;
+  color: var(--white-soft);
   font-weight: 500;
-  transition: color 0.3s;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: #ffffff;
+  color: var(--white);
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   height: 100vh;
   background: linear-gradient(
       rgba(11, 11, 15, 0.85),
       rgba(11, 11, 15, 0.95)
     ),
-    url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f")
-      center/cover no-repeat;
+    url("https://images.unsplash.com/photo-1485846234645-a62644f84728")
+      center / cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 80px;
+  padding: 0 90px;
 }
 
 .hero h2 {
-  font-size: 64px;
-  font-weight: 800;
-  max-width: 800px;
+  font-size: 68px;
+  font-weight: 900;
+  max-width: 900px;
   line-height: 1.1;
 }
 
 .hero p {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 18px;
-  max-width: 600px;
-  color: #d1d1d1;
+  max-width: 650px;
+  color: var(--white-soft);
 }
 
 .hero p span {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-style: italic;
-  color: #f5c16c;
+  color: var(--red);
 }
 
 .hero button {
-  margin-top: 40px;
+  margin-top: 45px;
   width: fit-content;
-  padding: 14px 36px;
+  padding: 15px 40px;
+  border-radius: 40px;
   border: none;
-  border-radius: 30px;
-  background: #f5c16c;
-  color: #000;
+  background: var(--red);
+  color: var(--white);
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(245, 193, 108, 0.3);
+  box-shadow: 0 12px 35px rgba(196, 22, 28, 0.35);
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS GÉNÉRALES
+========================= */
 .section {
-  padding: 120px 80px;
+  padding: 120px 90px;
 }
 
 .section h3 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 38px;
+  margin-bottom: 22px;
+  font-weight: 800;
 }
 
 .section p {
-  max-width: 700px;
+  max-width: 720px;
   font-size: 17px;
-  color: #cccccc;
+  color: var(--white-soft);
 }
 
+/* =========================
+   SECTION SOMBRE
+========================= */
 .section.dark {
-  background: #12121a;
+  background-color: var(--black-soft);
 }
 
-/* FOOTER */
+/* =========================
+   CARDS / BLOCS (SI UTILISÉS)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  padding: 40px;
+  padding: 50px 20px;
   text-align: center;
-  background: #0b0b0f;
+  background-color: var(--black);
   color: #777;
   font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .hero h2 {
+    font-size: 52px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 20px 30px;
+  }
+
+  .nav {
+    display: none;
   }
 
   .hero {
