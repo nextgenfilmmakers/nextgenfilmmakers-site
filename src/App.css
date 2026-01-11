@@ -1,24 +1,148 @@
-.app {
-  min-height: 100vh;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #0b0b0f;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 11, 15, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(11, 11, 15, 0.85),
+      rgba(11, 11, 15, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f")
+      center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 0 80px;
 }
 
-.hero h1 {
-  color: #e10600;
-  font-size: 3rem;
-  letter-spacing: 2px;
+.hero h2 {
+  font-size: 64px;
+  font-weight: 800;
+  max-width: 800px;
+  line-height: 1.1;
 }
 
 .hero p {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 600px;
+  color: #d1d1d1;
+}
+
+.hero p span {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: #f5c16c;
+}
+
+.hero button {
+  margin-top: 40px;
+  width: fit-content;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  background: #f5c16c;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(245, 193, 108, 0.3);
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 80px;
+}
+
+.section h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 700px;
+  font-size: 17px;
+  color: #cccccc;
+}
+
+.section.dark {
+  background: #12121a;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px;
+  text-align: center;
+  background: #0b0b0f;
+  color: #777;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 0 30px;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  .section {
+    padding: 80px 30px;
+  }
 }
