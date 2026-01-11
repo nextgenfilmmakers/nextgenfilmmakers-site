@@ -20,7 +20,6 @@ function App() {
         </h2>
         <p>
           Former  Créer  Inspirer
-          <span>Façonner l'avenir du cinéma, une vision à la fois.</span>
           </p>
         <button>Découvrir</button>
       </section>
