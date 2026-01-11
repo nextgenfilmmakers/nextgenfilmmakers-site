@@ -1,39 +1,68 @@
-/* ================================
-   VARIABLES DE LA CHARTE GRAPHIQUE
-================================== */
+/* =====================================================
+   NEXTGEN FILMMAKERS — GLOBAL STYLE
+   Palette : Noir / Blanc / Rouge
+===================================================== */
+
+/* ---------- VARIABLES ---------- */
 :root {
-  --black: #0b0b0b;
+  --black: #0a0a0a;
+  --black-soft: #111111;
   --white: #ffffff;
+  --gray: #bdbdbd;
   --red: #c4161c;
-  --gray: #b5b5b5;
+  --red-soft: #e63946;
 }
 
-/* ================================
-   RESET & BASE
-================================== */
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  background-color: var(--black);
-  color: var(--white);
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================================
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.7;
+}
+
+/* ---------- GLOBAL ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 90px 10%;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--gray);
+  font-size: 15px;
+}
+
+/* =====================================================
    HEADER / HERO
-================================== */
+===================================================== */
 header {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.85)
+  );
 }
 
 .hero {
@@ -41,9 +70,10 @@ header {
 }
 
 .hero h1 {
-  font-size: 48px;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
+  font-size: 52px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .hero .slogan {
@@ -52,59 +82,162 @@ header {
   font-weight: 300;
 }
 
-/* ================================
-   WHY SECTION
-================================== */
-.why-section {
-  padding: 80px 10%;
-  background-color: #0f0f0f;
+/* =====================================================
+   ABOUT / PRÉSENTATION
+===================================================== */
+.about {
+  background-color: var(--black-soft);
 }
 
-.why-section h2 {
+.about h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =====================================================
+   PROJECTS / PLAN D’ACTION
+===================================================== */
+.projects {
+  background-color: var(--black);
+}
+
+.projects h2 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 50px;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.why-grid {
+.steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
-.why-card {
+.step {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  transition: all 0.3s ease;
-  background-color: var(--black);
+  padding: 25px;
+  background-color: var(--black-soft);
+  transition: 0.3s ease;
 }
 
-.why-card:hover {
+.step:hover {
   border-color: var(--red);
   transform: translateY(-6px);
 }
 
-.why-card h3 {
+.step h3 {
   color: var(--red);
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.why-card p {
-  font-size: 14px;
-  color: var(--gray);
+.step span {
+  font-size: 13px;
+  font-weight: bold;
 }
 
-/* ================================
+/* STATUS */
+.step.validé {
+  border-left: 4px solid #1db954;
+}
+
+.step.en-cours {
+  border-left: 4px solid var(--red);
+}
+
+.step.a-venir {
+  border-left: 4px solid #555;
+}
+
+/* =====================================================
+   BUREAU EXÉCUTIF
+===================================================== */
+.bureau {
+  background-color: var(--black-soft);
+}
+
+.bureau h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.member {
+  background-color: var(--black);
+  padding: 25px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.member h3 {
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/* =====================================================
+   SPONSORS & PARTENAIRES
+===================================================== */
+.sponsors {
+  background-color: var(--black);
+}
+
+.sponsors h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.sponsor {
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================================
    FOOTER
-================================== */
+===================================================== */
 footer {
-  padding: 40px 10%;
-  background-color: #080808;
+  background-color: #070707;
+  padding: 50px 10%;
   text-align: center;
   font-size: 14px;
+}
+
+footer p {
   color: var(--gray);
 }
 
@@ -112,15 +245,15 @@ footer span {
   color: var(--red);
 }
 
-/* ================================
+/* =====================================================
    RESPONSIVE
-================================== */
+===================================================== */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 34px;
   }
 
-  .hero .slogan {
-    font-size: 16px;
+  section {
+    padding: 70px 8%;
   }
 }
