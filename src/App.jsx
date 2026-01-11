@@ -6,87 +6,82 @@ function App() {
       {/* HEADER */}
       <header className="header">
         <div className="logo-block">
-          <div className="logo">NEXTGEN FILMMAKERS</div>
-          <div className="slogan">Façonner l'avenir du cinéma, une vision à la fois</div>
-          </div>
+          <h1 className="logo">NEXTGEN FILMMAKERS</h1>
+          <span className="slogan">
+            Façonner l’avenir du cinéma, une vision à la fois.
+          </span>
+        </div>
+
         <nav className="nav">
           <a href="#about">À propos</a>
           <a href="#projects">Projets</a>
+          <a href="#partners">Partenaires</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <section className="why-section">
-  <h2>Pourquoi collaborer avec nous ?</h2>
-
-  <div className="why-grid">
-    <div className="why-card">
-      <h3>Vision claire</h3>
-      <p>
-        Nous développons des projets cinématographiques structurés,
-        portés par une vision africaine moderne et exportable.
-      </p>
-    </div>
-
-    <div className="why-card">
-      <h3>Écosystème professionnel</h3>
-      <p>
-        Une organisation digitale solide : administration, partenaires,
-        sponsors, contenus et médias centralisés.
-      </p>
-    </div>
-
-    <div className="why-card">
-      <h3>Impact & visibilité</h3>
-      <p>
-        Chaque collaboration est pensée pour offrir visibilité,
-        crédibilité et retour d’image à long terme.
-      </p>
-    </div>
-  </div>
-</section>
-
       {/* HERO */}
       <section className="hero">
         <h2>
-          La nouvelle génération <br /> du cinéma africain
+          Le futur du cinéma
+          <br />
+          commence maintenant
         </h2>
+
         <p>
-          Former  Créer  Inspirer
-          </p>
-        <button>Découvrir</button>
+          NEXTGEN FILMMAKERS est une structure créative dédiée à la production
+          cinématographique innovante, portée par une nouvelle génération de
+          talents africains.
+          <span>
+            Vision  Discipline  Impact.
+          </span>
+        </p>
+
+        <button>Explorer nos projets</button>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="section">
-        <h3>À propos</h3>
+      <section className="section" id="about">
+        <h3>Qui sommes-nous</h3>
         <p>
-          NextGen Filmmakers est une communauté créative dédiée aux jeunes
-          passionnés de cinéma, de vidéo et de storytelling visuel.
+          NEXTGEN FILMMAKERS est un collectif de passionnés 
+          engagés dans la construction d’un cinéma audacieux,
+          moderne et compétitif à l’échelle internationale.
         </p>
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="section dark">
+      <section className="section dark" id="projects">
         <h3>Nos projets</h3>
         <p>
-          Courts-métrages, documentaires, formations, collaborations
-          artistiques. Ici, les idées prennent vie.
+          Courts-métrages, longs-métrages, séries et contenus digitaux.
+          Chaque projet est conçu avec une exigence artistique et une vision
+          stratégique orientée vers l’impact culturel et économique.
+        </p>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="section" id="partners">
+        <h3>Partenariats & investissements</h3>
+        <p>
+          Nous collaborons avec des investisseurs, institutions et marques
+          partageant une même ambition : bâtir un cinéma durable, structuré et
+          rentable.
         </p>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="section">
-        <h3>Contact</h3>
+      <section className="section dark" id="contact">
+        <h3>Entrons en contact</h3>
         <p>
-          Une idée ? Un projet ?  
-          Écris-nous et faisons du bruit ensemble.
+          Vous souhaitez investir, collaborer ou soutenir nos productions ?
+          Parlons-en.
         </p>
       </section>
 
       {/* FOOTER */}
       <footer className="footer">
-        <p>© 2026 NextGen Filmmakers — Tous droits réservés</p>
+        © {new Date().getFullYear()} NEXTGEN FILMMAKERS — Tous droits réservés
       </footer>
     </>
   );
