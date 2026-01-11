@@ -16,6 +16,36 @@ function App() {
         </nav>
       </header>
 
+      <section className="why-section">
+  <h2>Pourquoi collaborer avec nous ?</h2>
+
+  <div className="why-grid">
+    <div className="why-card">
+      <h3>Vision claire</h3>
+      <p>
+        Nous développons des projets cinématographiques structurés,
+        portés par une vision africaine moderne et exportable.
+      </p>
+    </div>
+
+    <div className="why-card">
+      <h3>Écosystème professionnel</h3>
+      <p>
+        Une organisation digitale solide : administration, partenaires,
+        sponsors, contenus et médias centralisés.
+      </p>
+    </div>
+
+    <div className="why-card">
+      <h3>Impact & visibilité</h3>
+      <p>
+        Chaque collaboration est pensée pour offrir visibilité,
+        crédibilité et retour d’image à long terme.
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* HERO */}
       <section className="hero">
         <h2>
